@@ -1,3 +1,6 @@
+# JavaDoc
+docs/*
+
 *.class
 
 # Package Files #
