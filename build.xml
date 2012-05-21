@@ -40,9 +40,12 @@
 
   <!--Creates the deployable jar file  -->
   <target name="jar" depends="compile">
-    <jar destfile="${dist.dir}\eu.j0s.euler.p42.jar" basedir="${build.dir}">
+    <jar destfile="${dist.dir}/eu.j0s.euler.p42.jar" basedir="${build.dir}">
+    	<fileset dir="${basedir}">
+    		<include name="res/**" />
+    	</fileset>
       <manifest>
-        <attribute name="Main-Class" value="eu.j0s.euler.p42.Main.Main" />
+        <attribute name="Main-Class" value="eu.j0s.euler.p42.Main" />
       </manifest>
     </jar>
   </target>
